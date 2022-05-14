@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Proyecto</title>
+</head>
+
+<body>
+
+	<label>Primera cantidad</label>
+
+	<input type="number" id="n1">
+			
+	<label>Segunda cantidad</label>
+
+	<input type="number" id="n2">
+
+			
+
+	<label>SUMA</label>
+
+	<input type="radio" name="operacion" class="operador" value="suma">
+
+	<label>RESTA</label>
+
+	<input type="radio" name="operacion" class="operador" value="resta">
+
+	<label>MULTIPLICACION</label>
+
+	<input type="radio" name="operacion" class="operador" value="multiplicacion">
+
+	<label>DIVISION</label>
+
+	<input type="radio" name="operacion" class="operador" value="division">
+
+	<button type="button" id="boton">CALCULAR</button>
+
+	<output type="text" id="resultado">Resultado</output>
+
+	<script type="text/javascript">
+		
+
+		boton.onclick=function(){
+
+		let numero1=document.getElementById("n1").value;
+		let numero2=document.getElementById("n2").value;
+		let resultado=document.getElementById("resultado");
+		let operacion=document.querySelector('input[name="operacion"]:checked').value;
+
+		console.log(operacion);
+
+			switch (operacion){
+				
+			case 'suma':
+			
+			let suma = parseInt(numero1)+parseInt(numero2);
+
+			resultado.innerHTML=suma;
+			
+			break;
+
+
+
+			case 'resta':
+
+			let resta = parseInt(numero1)-parseInt(numero2);
+
+			resultado.innerHTML=resta;
+
+			break;
+
+
+			case 'division':
+
+			let division = parseInt(numero1)/parseInt(numero2);
+
+			resultado.innerHTML=division;
+
+			break;
+
+
+			case 'multiplicacion':
+
+			let multiplicacion = parseInt(numero1)/parseInt(numero2);
+
+			resultado.innerHTML=multiplicacion;
+
+			break;
+
+				}
+
+			}
+
+
+	</script>
+
+</body>
+
+</html>
